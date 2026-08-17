@@ -19,7 +19,7 @@ jobs:
         id: check
         run: |
           python3 << 'PY'
-          import json, urllib.request, urllib.error, os
+          import json, urllib.request, os
 
           with open("projects.json") as f:
               projects = json.load(f)
@@ -38,19 +38,13 @@ jobs:
               except Exception as e:
                   failures.append(f"- **{p['name']}** — {e} — {url}")
 
-          out = os.environ.get("GITHUB_OUTPUT", "/dev/stdout")
-          with open(out.replace("GITHUB_OUTPUT=", "") if out.startswith("GITHUB_OUTPUT=") else "/tmp/out", "w") as fh:
-              pass
-
-          if failures:
-              body = "## Live demo health check failed\n\n" + "\n".join(failures)
-              with open(os.environ["GITHUB_OUTPUT"], "a") as fh:
-                  fh.write(f"failed=true\n")
+          with open(os.environ["GITHUB_OUTPUT"], "a") as fh:
+              if failures:
+                  fh.write("failed=true\n")
                   fh.write("body<<EOF\n")
-                  fh.write(body + "\n")
+                  fh.write("## Live demo health check failed\n\n" + "\n".join(failures) + "\n")
                   fh.write("EOF\n")
-          else:
-              with open(os.environ["GITHUB_OUTPUT"], "a") as fh:
+              else:
                   fh.write("failed=false\n")
           PY
 
@@ -67,10 +61,7 @@ jobs:
               state: 'open',
               labels: 'demo-health'
             });
-            if (issues.some(i => i.title === title)) {
-              core.info('Open issue already exists — skipping');
-              return;
-            }
+            if (issues.some(i => i.title === title)) return;
             await github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
