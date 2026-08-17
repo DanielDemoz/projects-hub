@@ -1,0 +1,182 @@
+[
+  {
+    "name": "ttc-predict",
+    "category": "Toronto Transit Analytics",
+    "description": "ML delay prediction + route optimization for the TTC subway, deployed via FastAPI.",
+    "tech": ["Python", "FastAPI", "ML"],
+    "status": "partial",
+    "demoUrl": "https://danieldemoz.github.io/ttc-predict/",
+    "repoUrl": "https://github.com/DanielDemoz/ttc-predict"
+  },
+  {
+    "name": "TTC-Line1-Optimization",
+    "category": "Toronto Transit Analytics",
+    "description": "Risk-aware scheduling optimization for TTC Line 1 using Prophet forecasting and MILP (PuLP).",
+    "tech": ["Jupyter", "Prophet", "MILP"],
+    "status": "none",
+    "demoUrl": null,
+    "repoUrl": "https://github.com/DanielDemoz/TTC-Line1-Optimization"
+  },
+  {
+    "name": "toronto-transit-sentiment-nlp",
+    "category": "Toronto Transit Analytics",
+    "description": "NLP sentiment analysis (BERT + VADER) on public TTC rider feedback.",
+    "tech": ["Python", "NLP", "BERT"],
+    "status": "live",
+    "demoUrl": "https://danieldemoz.github.io/toronto-transit-sentiment-nlp/",
+    "repoUrl": "https://github.com/DanielDemoz/toronto-transit-sentiment-nlp"
+  },
+  {
+    "name": "interactive-transit-dashboard",
+    "category": "Toronto Transit Analytics",
+    "description": "Static Dash dashboard with real TTC KPIs — on-time performance, ridership, delay trends.",
+    "tech": ["Python", "Dash"],
+    "status": "live",
+    "demoUrl": "https://danieldemoz.github.io/interactive-transit-dashboard/",
+    "repoUrl": "https://github.com/DanielDemoz/interactive-transit-dashboard"
+  },
+  {
+    "name": "ecommerce-churn-analysis",
+    "category": "Machine Learning & Predictive Analytics",
+    "description": "Customer churn prediction and segmentation using machine learning.",
+    "tech": ["Python", "Streamlit", "ML"],
+    "status": "broken",
+    "demoUrl": "https://ecommerce-churn-analysis-hmpsaq7em9psjb8ivlzfzy.streamlit.app/",
+    "repoUrl": "https://github.com/DanielDemoz/ecommerce-churn-analysis"
+  },
+  {
+    "name": "Diabetes-Risk-Prediction-Using-BRFSS-US-and-CCHS-Canada",
+    "category": "Machine Learning & Predictive Analytics",
+    "description": "Diabetes risk model combining US BRFSS and Canadian CCHS health survey data.",
+    "tech": ["Jupyter", "Plotly"],
+    "status": "broken",
+    "demoUrl": "https://danieldemoz.github.io/Diabetes-Risk-Prediction-Using-BRFSS-US-and-CCHS-Canada/",
+    "repoUrl": "https://github.com/DanielDemoz/Diabetes-Risk-Prediction-Using-BRFSS-US-and-CCHS-Canada"
+  },
+  {
+    "name": "customer-segmentation-clv",
+    "category": "Machine Learning & Predictive Analytics",
+    "description": "Customer lifetime value prediction and segmentation with an ROI calculator.",
+    "tech": ["Jupyter", "ML"],
+    "status": "broken",
+    "demoUrl": "https://danieldemoz.github.io/customer-segmentation-clv/",
+    "repoUrl": "https://github.com/DanielDemoz/customer-segmentation-clv"
+  },
+  {
+    "name": "ontario-quote-agent",
+    "category": "Applied AI & Automation",
+    "description": "AI agent that shops Ontario auto insurance quotes across multiple channels (Claude Agent SDK + Playwright).",
+    "tech": ["Python", "Claude SDK", "Playwright"],
+    "status": "live",
+    "demoUrl": "https://danieldemoz.github.io/ontario-quote-agent/",
+    "repoUrl": "https://github.com/DanielDemoz/ontario-quote-agent"
+  },
+  {
+    "name": "brukd-ai-customer-engagement",
+    "category": "Applied AI & Automation",
+    "description": "Customer segmentation and CLV/churn prediction platform with AI-generated engagement recommendations.",
+    "tech": ["Streamlit", "XGBoost"],
+    "status": "live",
+    "demoUrl": "https://danieldemoz.github.io/brukd-ai-customer-engagement/",
+    "repoUrl": "https://github.com/DanielDemoz/brukd-ai-customer-engagement"
+  },
+  {
+    "name": "evidence-ai-funding-audit",
+    "category": "Applied AI & Automation",
+    "description": "AI platform analyzing Canadian public funding and charity networks for circular gifting patterns and risk.",
+    "tech": ["PostgreSQL", "Node.js", "Claude API"],
+    "status": "live",
+    "demoUrl": "https://danieldemoz.github.io/evidence-ai-funding-audit/",
+    "repoUrl": "https://github.com/DanielDemoz/evidence-ai-funding-audit"
+  },
+  {
+    "name": "career-college-rpa-demo",
+    "category": "Applied AI & Automation",
+    "description": "RPA/AI demo hub for career colleges — interactive presentation, metrics dashboard, ROI calculator.",
+    "tech": ["Python", "RPA"],
+    "status": "live",
+    "demoUrl": "https://danieldemoz.github.io/career-college-rpa-demo/",
+    "repoUrl": "https://github.com/DanielDemoz/career-college-rpa-demo"
+  },
+  {
+    "name": "fieldops-ai",
+    "category": "Applied AI & Automation",
+    "description": "Scheduling and job-costing platform for HVAC/electrical field service businesses.",
+    "tech": ["Python", "Dashboard"],
+    "status": "broken",
+    "demoUrl": "https://danieldemoz.github.io/fieldops-ai/demo.html",
+    "repoUrl": "https://github.com/DanielDemoz/fieldops-ai"
+  },
+  {
+    "name": "ai-booking-optimization",
+    "category": "Applied AI & Automation",
+    "description": "Healthcare clinic booking optimization — no-show prediction, reminders, and clinic dashboard.",
+    "tech": ["Python", "Flask", "ML"],
+    "status": "live",
+    "demoUrl": "https://danieldemoz.github.io/ai-booking-optimization/",
+    "repoUrl": "https://github.com/DanielDemoz/ai-booking-optimization"
+  },
+  {
+    "name": "ai-restaurant-menu",
+    "category": "Applied AI & Automation",
+    "description": "AI-assisted restaurant ordering interface with a voice-enabled menu assistant.",
+    "tech": ["JavaScript"],
+    "status": "broken",
+    "demoUrl": "https://danieldemoz.github.io/ai-restaurant-menu/public/index.html",
+    "repoUrl": "https://github.com/DanielDemoz/ai-restaurant-menu"
+  },
+  {
+    "name": "PowerBI-Portfolio-Daniel-D",
+    "category": "Business Intelligence & SQL",
+    "description": "Eight Power BI dashboards across healthcare, finance, construction, retail, and transportation.",
+    "tech": ["Power BI", "DAX"],
+    "status": "live",
+    "demoUrl": "https://danieldemoz.github.io/PowerBI-Portfolio-Daniel-D/",
+    "repoUrl": "https://github.com/DanielDemoz/PowerBI-Portfolio-Daniel-D"
+  },
+  {
+    "name": "sql-portfolio",
+    "category": "Business Intelligence & SQL",
+    "description": "Four real case studies demonstrating window functions, CTEs, and joins.",
+    "tech": ["SQL"],
+    "status": "live",
+    "demoUrl": "https://danieldemoz.github.io/sql-portfolio/",
+    "repoUrl": "https://github.com/DanielDemoz/sql-portfolio"
+  },
+  {
+    "name": "maple-grove-realty-crm",
+    "category": "Web / Product Prototypes",
+    "description": "Front-end CRM prototype for residential real estate lead capture and pipeline management.",
+    "tech": ["JavaScript"],
+    "status": "partial",
+    "demoUrl": "https://danieldemoz.github.io/maple-grove-realty-crm/",
+    "repoUrl": "https://github.com/DanielDemoz/maple-grove-realty-crm"
+  },
+  {
+    "name": "esl",
+    "category": "Web / Product Prototypes",
+    "description": "ESL Placement Portal — listening/speaking assessment, level placement, and lesson unlocking.",
+    "tech": ["Node.js", "JavaScript"],
+    "status": "none",
+    "demoUrl": null,
+    "repoUrl": "https://github.com/DanielDemoz/esl"
+  },
+  {
+    "name": "ai-ethics-case-study",
+    "category": "Ethics & Thought Leadership",
+    "description": "Ethical analysis and metaphor critique of Tesla's Optimus humanoid robot.",
+    "tech": ["Ethics"],
+    "status": "none",
+    "demoUrl": null,
+    "repoUrl": "https://github.com/DanielDemoz/ai-ethics-case-study"
+  },
+  {
+    "name": "Daniel-Demoz-Data-Science-AI-Analytics-Portfolio",
+    "category": "Portfolio Hub",
+    "description": "Canonical portfolio site — Data Scientist & AI Consultant positioning, full project index.",
+    "tech": ["HTML"],
+    "status": "live",
+    "demoUrl": "https://danieldemoz.github.io/Daniel-Demoz-Data-Science-AI-Analytics-Portfolio/",
+    "repoUrl": "https://github.com/DanielDemoz/Daniel-Demoz-Data-Science-AI-Analytics-Portfolio"
+  }
+]

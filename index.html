@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Daniel S. Demoz — Projects Hub. Live demos, code, and status for data science, AI, and analytics portfolio work.">
+  <title>Projects Hub | Daniel S. Demoz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f1419;
+      --bg-card: #1a2332;
+      --bg-card-hover: #1f2a3d;
+      --border: #2d3a4f;
+      --text: #e8edf4;
+      --text-muted: #94a3b8;
+      --accent: #c46a2d;
+      --accent-soft: rgba(196, 106, 45, 0.15);
+      --green: #22c55e;
+      --green-bg: rgba(34, 197, 94, 0.12);
+      --amber: #f59e0b;
+      --amber-bg: rgba(245, 158, 11, 0.12);
+      --red: #ef4444;
+      --red-bg: rgba(239, 68, 68, 0.12);
+      --gray: #64748b;
+      --gray-bg: rgba(100, 116, 139, 0.15);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    .hero {
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #151d28 0%, var(--bg) 100%);
+      padding: 3rem 1.5rem 2.5rem;
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    h1 {
+      font-family: 'Manrope', 'Inter', sans-serif;
+      font-size: clamp(2rem, 5vw, 2.75rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.75rem;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 42rem;
+    }
+
+    .contact-strip {
+      margin-top: 1.25rem;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    .contact-strip a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .contact-strip a:hover { text-decoration: underline; }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    .category {
+      margin-bottom: 2.75rem;
+    }
+
+    .category h2 {
+      font-family: 'Manrope', 'Inter', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .card:hover {
+      background: var(--bg-card-hover);
+      border-color: #3d4f6a;
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .card h3 {
+      font-family: 'Manrope', 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.35;
+      word-break: break-word;
+    }
+
+    .badge {
+      flex-shrink: 0;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.5rem;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    .badge.green { color: var(--green); background: var(--green-bg); }
+    .badge.amber { color: var(--amber); background: var(--amber-bg); }
+    .badge.red { color: var(--red); background: var(--red-bg); }
+    .badge.gray { color: var(--gray); background: var(--gray-bg); }
+
+    .desc {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      flex: 1;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .chip {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 0.25rem;
+    }
+
+    .links a {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      padding: 0.35rem 0.75rem;
+      border: 1px solid var(--accent);
+      border-radius: 6px;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .links a:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .links a.secondary {
+      color: var(--text-muted);
+      border-color: var(--border);
+    }
+
+    .links a.secondary:hover {
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.8125rem;
+    }
+
+    footer a { color: var(--accent); text-decoration: none; }
+
+    .loading, .error {
+      text-align: center;
+      padding: 4rem 1.5rem;
+      color: var(--text-muted);
+    }
+
+    .error { color: var(--red); }
+
+    @media (max-width: 640px) {
+      .card-top { flex-direction: column; }
+      .badge { align-self: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Daniel S. Demoz</p>
+      <h1>Projects Hub</h1>
+      <p class="subtitle">Every public project with live demo links, code, and current status — data science, AI, analytics, and product prototypes.</p>
+      <p class="contact-strip">
+        <a href="mailto:asbdansi9@gmail.com">asbdansi9@gmail.com</a> ·
+        <a href="https://linkedin.com/in/daniel-s-demoz" target="_blank" rel="noopener">LinkedIn</a> ·
+        <a href="https://github.com/DanielDemoz" target="_blank" rel="noopener">GitHub</a> ·
+        <a href="https://brukdconsultancy.com" target="_blank" rel="noopener">brukdconsultancy.com</a>
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <div id="app"><p class="loading">Loading projects…</p></div>
+  </main>
+
+  <footer>
+    <p>Data maintained in <a href="https://github.com/DanielDemoz/projects-hub/blob/main/projects.json">projects.json</a> — edit one file to update this page.</p>
+  </footer>
+
+  <script>
+    const CATEGORY_ORDER = [
+      'Toronto Transit Analytics',
+      'Machine Learning & Predictive Analytics',
+      'Applied AI & Automation',
+      'Business Intelligence & SQL',
+      'Web / Product Prototypes',
+      'Ethics & Thought Leadership',
+      'Portfolio Hub'
+    ];
+
+    const STATUS_CLASS = { live: 'green', partial: 'amber', broken: 'red', none: 'gray' };
+    const STATUS_LABEL = {
+      live: 'Live & working',
+      partial: 'Partial / static demo',
+      broken: 'Needs fix',
+      none: 'Code only'
+    };
+
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function cardHtml(p) {
+      const statusClass = STATUS_CLASS[p.status] || 'gray';
+      const statusLabel = STATUS_LABEL[p.status] || p.status;
+      const demoLink = p.demoUrl
+        ? `<a href="${escapeHtml(p.demoUrl)}" target="_blank" rel="noopener">Live Demo</a>`
+        : '';
+      const techChips = (p.tech || []).map(t => `<span class="chip">${escapeHtml(t)}</span>`).join('');
+
+      return `<div class="card">
+        <div class="card-top">
+          <h3>${escapeHtml(p.name)}</h3>
+          <span class="badge ${statusClass}">${escapeHtml(statusLabel)}</span>
+        </div>
+        <p class="desc">${escapeHtml(p.description)}</p>
+        <div class="chips">${techChips}</div>
+        <div class="links">
+          ${demoLink}
+          <a href="${escapeHtml(p.repoUrl)}" class="${demoLink ? 'secondary' : ''}" target="_blank" rel="noopener">Code</a>
+        </div>
+      </div>`;
+    }
+
+    function renderHub(projects) {
+      const app = document.getElementById('app');
+      app.innerHTML = '';
+
+      const byCategory = {};
+      projects.forEach(p => {
+        if (!byCategory[p.category]) byCategory[p.category] = [];
+        byCategory[p.category].push(p);
+      });
+
+      const categories = CATEGORY_ORDER.filter(c => byCategory[c]?.length);
+
+      categories.forEach(cat => {
+        const section = document.createElement('section');
+        section.className = 'category';
+        const cards = byCategory[cat].map(cardHtml).join('');
+        section.innerHTML = `<h2>${escapeHtml(cat)}</h2><div class="grid">${cards}</div>`;
+        app.appendChild(section);
+      });
+    }
+
+    fetch('projects.json')
+      .then(r => {
+        if (!r.ok) throw new Error('Failed to load projects.json');
+        return r.json();
+      })
+      .then(renderHub)
+      .catch(err => {
+        document.getElementById('app').innerHTML = `<p class="error">Could not load projects: ${escapeHtml(err.message)}</p>`;
+      });
+  </script>
+</body>
+</html>
