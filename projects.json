@@ -13,8 +13,8 @@
     "category": "Toronto Transit Analytics",
     "description": "Risk-aware scheduling optimization for TTC Line 1 using Prophet forecasting and MILP (PuLP).",
     "tech": ["Jupyter", "Prophet", "MILP"],
-    "status": "none",
-    "demoUrl": null,
+    "status": "partial",
+    "demoUrl": "https://danieldemoz.github.io/TTC-Line1-Optimization/",
     "repoUrl": "https://github.com/DanielDemoz/TTC-Line1-Optimization"
   },
   {
@@ -175,8 +175,8 @@
     "category": "Portfolio Hub",
     "description": "Canonical portfolio site — Data Scientist & AI Consultant positioning, full project index.",
     "tech": ["HTML"],
-    "status": "live",
-    "demoUrl": "https://danieldemoz.github.io/Daniel-Demoz-Data-Science-AI-Analytics-Portfolio/",
+    "status": "none",
+    "demoUrl": null,
     "repoUrl": "https://github.com/DanielDemoz/Daniel-Demoz-Data-Science-AI-Analytics-Portfolio"
   }
 ]
