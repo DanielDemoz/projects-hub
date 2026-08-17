@@ -3,29 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Daniel S. Demoz — Projects Hub. Live demos, code, and status for data science, AI, and analytics portfolio work.">
+  <meta name="description" content="Daniel S. Demoz — portfolio projects in data science, AI, analytics, and product prototypes. Live demos and source code.">
   <title>Projects Hub | Daniel S. Demoz</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0f1419;
+      --bg: #0c1117;
+      --bg-elevated: #141b24;
       --bg-card: #1a2332;
       --bg-card-hover: #1f2a3d;
-      --border: #2d3a4f;
-      --text: #e8edf4;
+      --border: #2a3544;
+      --text: #eef2f7;
       --text-muted: #94a3b8;
+      --text-soft: #64748b;
       --accent: #c46a2d;
-      --accent-soft: rgba(196, 106, 45, 0.15);
-      --green: #22c55e;
-      --green-bg: rgba(34, 197, 94, 0.12);
-      --amber: #f59e0b;
-      --amber-bg: rgba(245, 158, 11, 0.12);
-      --red: #ef4444;
-      --red-bg: rgba(239, 68, 68, 0.12);
-      --gray: #64748b;
-      --gray-bg: rgba(100, 116, 139, 0.15);
+      --accent-hover: #d47a3d;
+      --green: #34d399;
+      --green-bg: rgba(52, 211, 153, 0.1);
+      --gray: #94a3b8;
+      --gray-bg: rgba(148, 163, 184, 0.1);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -34,97 +32,126 @@
       font-family: 'Inter', system-ui, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.65;
       min-height: 100vh;
     }
 
     .hero {
       border-bottom: 1px solid var(--border);
-      background: linear-gradient(180deg, #151d28 0%, var(--bg) 100%);
-      padding: 3rem 1.5rem 2.5rem;
+      background: linear-gradient(165deg, #121a24 0%, var(--bg) 55%);
+      padding: 3.5rem 1.5rem 3rem;
     }
 
-    .hero-inner {
-      max-width: 1100px;
+    .hero-inner, main, .footer-inner {
+      max-width: 1080px;
       margin: 0 auto;
     }
 
     .eyebrow {
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       font-weight: 600;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--accent);
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.85rem;
     }
 
     h1 {
       font-family: 'Manrope', 'Inter', sans-serif;
-      font-size: clamp(2rem, 5vw, 2.75rem);
+      font-size: clamp(2rem, 4.5vw, 2.65rem);
       font-weight: 800;
       letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+      line-height: 1.15;
+    }
+
+    .hero-lead {
+      color: var(--text-muted);
+      font-size: 1.0625rem;
+      max-width: 40rem;
       margin-bottom: 0.75rem;
     }
 
-    .subtitle {
-      color: var(--text-muted);
-      font-size: 1.05rem;
+    .hero-note {
+      color: var(--text-soft);
+      font-size: 0.9375rem;
       max-width: 42rem;
     }
 
     .contact-strip {
-      margin-top: 1.25rem;
+      margin-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.25rem;
       font-size: 0.875rem;
-      color: var(--text-muted);
     }
 
     .contact-strip a {
-      color: var(--accent);
+      color: var(--text-muted);
       text-decoration: none;
+      transition: color 0.15s;
     }
 
-    .contact-strip a:hover { text-decoration: underline; }
+    .contact-strip a:hover { color: var(--accent); }
 
-    main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem 4rem;
-    }
+    main { padding: 2.5rem 1.5rem 4rem; }
 
     .category {
-      margin-bottom: 2.75rem;
+      margin-bottom: 3.25rem;
     }
 
-    .category h2 {
+    .category-header {
+      margin-bottom: 1.5rem;
+      padding-left: 1rem;
+      border-left: 3px solid var(--accent);
+    }
+
+    .category-header h2 {
       font-family: 'Manrope', 'Inter', sans-serif;
-      font-size: 1.25rem;
+      font-size: 1.35rem;
       font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.65rem;
       color: var(--text);
-      margin-bottom: 1.25rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid var(--border);
+    }
+
+    .category-intro {
+      font-size: 0.9375rem;
+      color: var(--text-muted);
+      max-width: 52rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .category-tools {
+      font-size: 0.8125rem;
+      color: var(--text-soft);
+    }
+
+    .category-tools strong {
+      color: #7dd3fc;
+      font-weight: 600;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1.25rem;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 1.125rem;
     }
 
     .card {
       background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.25rem;
+      border-radius: 10px;
+      padding: 1.25rem 1.25rem 1.125rem;
       display: flex;
       flex-direction: column;
-      gap: 0.75rem;
-      transition: background 0.2s, border-color 0.2s;
+      gap: 0.65rem;
+      transition: border-color 0.2s, transform 0.2s;
     }
 
     .card:hover {
-      background: var(--bg-card-hover);
-      border-color: #3d4f6a;
+      border-color: #3d5068;
+      transform: translateY(-2px);
     }
 
     .card-top {
@@ -136,7 +163,7 @@
 
     .card h3 {
       font-family: 'Manrope', 'Inter', sans-serif;
-      font-size: 1rem;
+      font-size: 0.975rem;
       font-weight: 700;
       line-height: 1.35;
       word-break: break-word;
@@ -144,24 +171,23 @@
 
     .badge {
       flex-shrink: 0;
-      font-size: 0.65rem;
+      font-size: 0.625rem;
       font-weight: 600;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
-      padding: 0.25rem 0.5rem;
-      border-radius: 999px;
+      padding: 0.28rem 0.55rem;
+      border-radius: 4px;
       white-space: nowrap;
     }
 
-    .badge.green { color: var(--green); background: var(--green-bg); }
-    .badge.amber { color: var(--amber); background: var(--amber-bg); }
-    .badge.red { color: var(--red); background: var(--red-bg); }
-    .badge.gray { color: var(--gray); background: var(--gray-bg); }
+    .badge.green { color: var(--green); background: var(--green-bg); border: 1px solid rgba(52, 211, 153, 0.2); }
+    .badge.gray { color: var(--gray); background: var(--gray-bg); border: 1px solid rgba(148, 163, 184, 0.15); }
 
     .desc {
       font-size: 0.875rem;
       color: var(--text-muted);
       flex: 1;
+      line-height: 1.55;
     }
 
     .chips {
@@ -171,57 +197,72 @@
     }
 
     .chip {
-      font-size: 0.7rem;
+      font-size: 0.6875rem;
       font-weight: 500;
-      color: var(--text-muted);
-      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-soft);
+      background: var(--bg-elevated);
       border: 1px solid var(--border);
-      padding: 0.2rem 0.5rem;
+      padding: 0.18rem 0.45rem;
       border-radius: 4px;
     }
 
     .links {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-top: 0.25rem;
+      gap: 0.5rem;
+      margin-top: 0.35rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border);
     }
 
     .links a {
       font-size: 0.8125rem;
       font-weight: 600;
-      color: var(--accent);
       text-decoration: none;
-      padding: 0.35rem 0.75rem;
-      border: 1px solid var(--accent);
+      padding: 0.4rem 0.85rem;
       border-radius: 6px;
-      transition: background 0.15s, color 0.15s;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
     }
 
-    .links a:hover {
-      background: var(--accent);
+    .links a.primary {
       color: #fff;
+      background: var(--accent);
+      border: 1px solid var(--accent);
+    }
+
+    .links a.primary:hover {
+      background: var(--accent-hover);
+      border-color: var(--accent-hover);
     }
 
     .links a.secondary {
       color: var(--text-muted);
-      border-color: var(--border);
+      border: 1px solid var(--border);
     }
 
     .links a.secondary:hover {
-      background: rgba(255, 255, 255, 0.06);
       color: var(--text);
+      border-color: #4a5d75;
+      background: rgba(255, 255, 255, 0.04);
     }
 
     footer {
-      text-align: center;
-      padding: 2rem 1.5rem;
       border-top: 1px solid var(--border);
-      color: var(--text-muted);
+      padding: 2rem 1.5rem;
+      background: var(--bg-elevated);
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.75rem;
       font-size: 0.8125rem;
+      color: var(--text-soft);
     }
 
     footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
 
     .loading, .error {
       text-align: center;
@@ -229,11 +270,11 @@
       color: var(--text-muted);
     }
 
-    .error { color: var(--red); }
+    .error { color: #f87171; }
 
     @media (max-width: 640px) {
-      .card-top { flex-direction: column; }
-      .badge { align-self: flex-start; }
+      .card-top { flex-direction: column; gap: 0.5rem; }
+      .hero { padding-top: 2.5rem; }
     }
   </style>
 </head>
@@ -242,13 +283,14 @@
     <div class="hero-inner">
       <p class="eyebrow">Daniel S. Demoz</p>
       <h1>Projects Hub</h1>
-      <p class="subtitle">Every public project with live demo links, code, and current status — data science, AI, analytics, and product prototypes.</p>
-      <p class="contact-strip">
-        <a href="mailto:asbdansi9@gmail.com">asbdansi9@gmail.com</a> ·
-        <a href="https://linkedin.com/in/daniel-s-demoz" target="_blank" rel="noopener">LinkedIn</a> ·
-        <a href="https://github.com/DanielDemoz" target="_blank" rel="noopener">GitHub</a> ·
+      <p class="hero-lead">Selected work in data science, applied AI, and analytics. Each entry links to a live demo or the source repository.</p>
+      <p class="hero-note">Projects are grouped by theme below. Open any demo to review the interface, or follow the code link for notebooks, models, and setup notes.</p>
+      <div class="contact-strip">
+        <a href="mailto:asbdansi9@gmail.com">asbdansi9@gmail.com</a>
+        <a href="https://linkedin.com/in/daniel-s-demoz" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/DanielDemoz" target="_blank" rel="noopener">GitHub</a>
         <a href="https://brukdconsultancy.com" target="_blank" rel="noopener">brukdconsultancy.com</a>
-      </p>
+      </div>
     </div>
   </header>
 
@@ -257,7 +299,10 @@
   </main>
 
   <footer>
-    <p>Data maintained in <a href="https://github.com/DanielDemoz/projects-hub/blob/main/projects.json">projects.json</a> — edit one file to update this page.</p>
+    <div class="footer-inner">
+      <span>Daniel S. Demoz · Data Science &amp; AI</span>
+      <a href="https://github.com/DanielDemoz/projects-hub" target="_blank" rel="noopener">View this hub on GitHub</a>
+    </div>
   </footer>
 
   <script>
@@ -271,12 +316,41 @@
       'Portfolio Hub'
     ];
 
-    const STATUS_CLASS = { live: 'green', partial: 'amber', broken: 'red', none: 'gray' };
+    const CATEGORY_META = {
+      'Toronto Transit Analytics': {
+        intro: 'A connected set of four builds on Toronto transit data. The focus is delay risk, schedule planning, rider feedback, and day-to-day KPIs for Line 1 and the wider network.',
+        tools: 'Python, FastAPI, Prophet, PuLP, BERT, VADER, Dash, Plotly, Leaflet, Toronto Open Data'
+      },
+      'Machine Learning & Predictive Analytics': {
+        intro: 'Supervised learning projects aimed at retention, health risk, and customer value. Each repo walks through preparation, modeling, and how results could inform a business decision.',
+        tools: 'Python, scikit-learn, XGBoost, Jupyter, Streamlit, Plotly, pandas'
+      },
+      'Applied AI & Automation': {
+        intro: 'Working prototypes for agents, workflow automation, and operational software. These range from college enrollment processing to field service scheduling and public funding review.',
+        tools: 'Python, JavaScript, Claude SDK, Playwright, Streamlit, Flask, PostgreSQL, Node.js'
+      },
+      'Business Intelligence & SQL': {
+        intro: 'Reporting and query work built for managers who need clear numbers, not raw tables. Includes multi-industry Power BI samples and SQL case studies with realistic business questions.',
+        tools: 'Power BI, DAX, SQL, PostgreSQL, window functions, CTEs'
+      },
+      'Web / Product Prototypes': {
+        intro: 'Lightweight front-end builds that show how a product might feel before backend investment. Useful for demos with stakeholders and for testing layout and user flow.',
+        tools: 'JavaScript, HTML, CSS, Node.js, Express, localStorage'
+      },
+      'Ethics & Thought Leadership': {
+        intro: 'A structured case study on robotics and metaphor in product design. Written work rather than a deployed app, included to show how I frame technology choices beyond the model score.',
+        tools: 'Research writing, ethics analysis, case study format'
+      },
+      'Portfolio Hub': {
+        intro: 'The main portfolio site with background, selected outcomes, and contact details. Use it for context on teaching, consulting, and how the projects below fit together.',
+        tools: 'HTML, CSS, Tailwind, static site'
+      }
+    };
+
+    const STATUS_CLASS = { live: 'green', none: 'gray' };
     const STATUS_LABEL = {
-      live: 'Live & working',
-      partial: 'Partial / static demo',
-      broken: 'Needs fix',
-      none: 'Code only'
+      live: 'Live demo',
+      none: 'Code & write-up'
     };
 
     function escapeHtml(str) {
@@ -289,13 +363,13 @@
 
     function cardHtml(p) {
       const statusClass = STATUS_CLASS[p.status] || 'gray';
-      const statusLabel = STATUS_LABEL[p.status] || p.status;
+      const statusLabel = STATUS_LABEL[p.status] || 'Available';
       const demoLink = p.demoUrl
-        ? `<a href="${escapeHtml(p.demoUrl)}" target="_blank" rel="noopener">Live Demo</a>`
+        ? `<a href="${escapeHtml(p.demoUrl)}" class="primary" target="_blank" rel="noopener">Live demo</a>`
         : '';
       const techChips = (p.tech || []).map(t => `<span class="chip">${escapeHtml(t)}</span>`).join('');
 
-      return `<div class="card">
+      return `<article class="card">
         <div class="card-top">
           <h3>${escapeHtml(p.name)}</h3>
           <span class="badge ${statusClass}">${escapeHtml(statusLabel)}</span>
@@ -304,9 +378,9 @@
         <div class="chips">${techChips}</div>
         <div class="links">
           ${demoLink}
-          <a href="${escapeHtml(p.repoUrl)}" class="${demoLink ? 'secondary' : ''}" target="_blank" rel="noopener">Code</a>
+          <a href="${escapeHtml(p.repoUrl)}" class="secondary" target="_blank" rel="noopener">Source code</a>
         </div>
-      </div>`;
+      </article>`;
     }
 
     function renderHub(projects) {
@@ -319,20 +393,24 @@
         byCategory[p.category].push(p);
       });
 
-      const categories = CATEGORY_ORDER.filter(c => byCategory[c]?.length);
-
-      categories.forEach(cat => {
+      CATEGORY_ORDER.filter(c => byCategory[c]?.length).forEach(cat => {
+        const meta = CATEGORY_META[cat] || { intro: '', tools: '' };
         const section = document.createElement('section');
         section.className = 'category';
-        const cards = byCategory[cat].map(cardHtml).join('');
-        section.innerHTML = `<h2>${escapeHtml(cat)}</h2><div class="grid">${cards}</div>`;
+        section.innerHTML = `
+          <div class="category-header">
+            <h2>${escapeHtml(cat)}</h2>
+            <p class="category-intro">${escapeHtml(meta.intro)}</p>
+            ${meta.tools ? `<p class="category-tools"><strong>Tools:</strong> ${escapeHtml(meta.tools)}</p>` : ''}
+          </div>
+          <div class="grid">${byCategory[cat].map(cardHtml).join('')}</div>`;
         app.appendChild(section);
       });
     }
 
     fetch('projects.json')
       .then(r => {
-        if (!r.ok) throw new Error('Failed to load projects.json');
+        if (!r.ok) throw new Error('Could not load project list');
         return r.json();
       })
       .then(renderHub)
