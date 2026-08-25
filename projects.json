@@ -117,6 +117,15 @@
     "repoUrl": "https://github.com/DanielDemoz/ai-booking-optimization"
   },
   {
+    "name": "ai-governance-assessment",
+    "category": "Applied AI & Automation",
+    "description": "Professional AI governance readiness assessment with deterministic scoring, rule-based recommendations, and a 5×5 risk matrix.",
+    "tech": ["Next.js", "FastAPI", "Python"],
+    "status": "none",
+    "demoUrl": null,
+    "repoUrl": "https://github.com/DanielDemoz/ai-governance-assessment"
+  },
+  {
     "name": "ai-restaurant-menu",
     "category": "Applied AI & Automation",
     "description": "AI-assisted restaurant ordering interface with a voice-enabled menu assistant.",
