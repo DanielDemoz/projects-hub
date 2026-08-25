@@ -1,41 +1,5 @@
 [
   {
-    "name": "ttc-predict",
-    "category": "Toronto Transit Analytics",
-    "description": "ML delay prediction + route optimization for the TTC subway, deployed via FastAPI.",
-    "tech": ["Python", "FastAPI", "ML"],
-    "status": "live",
-    "demoUrl": "https://danieldemoz.github.io/ttc-predict/",
-    "repoUrl": "https://github.com/DanielDemoz/ttc-predict"
-  },
-  {
-    "name": "TTC-Line1-Optimization",
-    "category": "Toronto Transit Analytics",
-    "description": "Risk-aware scheduling optimization for TTC Line 1 using Prophet forecasting and MILP (PuLP).",
-    "tech": ["Jupyter", "Prophet", "MILP"],
-    "status": "live",
-    "demoUrl": "https://danieldemoz.github.io/TTC-Line1-Optimization/",
-    "repoUrl": "https://github.com/DanielDemoz/TTC-Line1-Optimization"
-  },
-  {
-    "name": "toronto-transit-sentiment-nlp",
-    "category": "Toronto Transit Analytics",
-    "description": "NLP sentiment analysis (BERT + VADER) on public TTC rider feedback.",
-    "tech": ["Python", "NLP", "BERT"],
-    "status": "live",
-    "demoUrl": "https://danieldemoz.github.io/toronto-transit-sentiment-nlp/",
-    "repoUrl": "https://github.com/DanielDemoz/toronto-transit-sentiment-nlp"
-  },
-  {
-    "name": "interactive-transit-dashboard",
-    "category": "Toronto Transit Analytics",
-    "description": "Static Dash dashboard with real TTC KPIs — on-time performance, ridership, delay trends.",
-    "tech": ["Python", "Dash"],
-    "status": "live",
-    "demoUrl": "https://danieldemoz.github.io/interactive-transit-dashboard/",
-    "repoUrl": "https://github.com/DanielDemoz/interactive-transit-dashboard"
-  },
-  {
     "name": "ecommerce-churn-analysis",
     "category": "Machine Learning & Predictive Analytics",
     "description": "Customer churn prediction and segmentation using machine learning.",
@@ -61,6 +25,42 @@
     "status": "live",
     "demoUrl": "https://danieldemoz.github.io/customer-segmentation-clv/",
     "repoUrl": "https://github.com/DanielDemoz/customer-segmentation-clv"
+  },
+  {
+    "name": "ttc-predict",
+    "category": "Machine Learning & Predictive Analytics",
+    "description": "ML delay prediction + route optimization for the TTC subway, deployed via FastAPI.",
+    "tech": ["Python", "FastAPI", "ML"],
+    "status": "live",
+    "demoUrl": "https://danieldemoz.github.io/ttc-predict/",
+    "repoUrl": "https://github.com/DanielDemoz/ttc-predict"
+  },
+  {
+    "name": "TTC-Line1-Optimization",
+    "category": "Machine Learning & Predictive Analytics",
+    "description": "Risk-aware scheduling optimization for TTC Line 1 using Prophet forecasting and MILP (PuLP).",
+    "tech": ["Jupyter", "Prophet", "MILP"],
+    "status": "live",
+    "demoUrl": "https://danieldemoz.github.io/TTC-Line1-Optimization/",
+    "repoUrl": "https://github.com/DanielDemoz/TTC-Line1-Optimization"
+  },
+  {
+    "name": "toronto-transit-sentiment-nlp",
+    "category": "Machine Learning & Predictive Analytics",
+    "description": "NLP sentiment analysis (BERT + VADER) on public TTC rider feedback.",
+    "tech": ["Python", "NLP", "BERT"],
+    "status": "live",
+    "demoUrl": "https://danieldemoz.github.io/toronto-transit-sentiment-nlp/",
+    "repoUrl": "https://github.com/DanielDemoz/toronto-transit-sentiment-nlp"
+  },
+  {
+    "name": "interactive-transit-dashboard",
+    "category": "Machine Learning & Predictive Analytics",
+    "description": "Static Dash dashboard with real TTC KPIs — on-time performance, ridership, delay trends.",
+    "tech": ["Python", "Dash"],
+    "status": "live",
+    "demoUrl": "https://danieldemoz.github.io/interactive-transit-dashboard/",
+    "repoUrl": "https://github.com/DanielDemoz/interactive-transit-dashboard"
   },
   {
     "name": "ai-governance-assessment",
