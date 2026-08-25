@@ -63,6 +63,15 @@
     "repoUrl": "https://github.com/DanielDemoz/interactive-transit-dashboard"
   },
   {
+    "name": "ai-opportunity-roi-assessment",
+    "category": "AI Governance, Ethics & Responsible AI",
+    "description": "AI Opportunity & ROI Assessment for SMBs — identify practical AI use cases, estimate potential business value, assess feasibility and risk, and prioritize initiatives worth piloting.",
+    "tech": ["Next.js", "TypeScript", "Tailwind"],
+    "status": "live",
+    "demoUrl": "https://danieldemoz.github.io/ai-opportunity-roi-assessment/",
+    "repoUrl": "https://github.com/DanielDemoz/ai-opportunity-roi-assessment"
+  },
+  {
     "name": "ai-governance-assessment",
     "category": "AI Governance, Ethics & Responsible AI",
     "description": "Professional AI governance readiness assessment with deterministic scoring, rule-based recommendations, and a 5×5 risk matrix.",
