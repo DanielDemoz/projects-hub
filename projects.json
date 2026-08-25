@@ -81,6 +81,15 @@
     "repoUrl": "https://github.com/DanielDemoz/evidence-ai-funding-audit"
   },
   {
+    "name": "ai-vendor-selection-governance-advisor",
+    "category": "AI Governance, Ethics & Responsible AI",
+    "description": "Vendor-neutral AI selection advisor for SMBs — deterministic scoring, governance gates, and evidence-based product comparisons.",
+    "tech": ["Next.js", "TypeScript", "Tailwind"],
+    "status": "live",
+    "demoUrl": "https://danieldemoz.github.io/ai-vendor-selection-governance-advisor/",
+    "repoUrl": "https://github.com/DanielDemoz/ai-vendor-selection-governance-advisor"
+  },
+  {
     "name": "ai-ethics-case-study",
     "category": "AI Governance, Ethics & Responsible AI",
     "description": "Ethical analysis and metaphor critique of Tesla's Optimus humanoid robot.",
