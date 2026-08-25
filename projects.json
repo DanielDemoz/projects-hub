@@ -56,7 +56,7 @@
   {
     "name": "interactive-transit-dashboard",
     "category": "Machine Learning & Predictive Analytics",
-    "description": "Static Dash dashboard with real TTC KPIs — on-time performance, ridership, delay trends.",
+    "description": "Static Dash dashboard with real TTC KPIs: on-time performance, ridership, delay trends.",
     "tech": ["Python", "Dash"],
     "status": "live",
     "demoUrl": "https://danieldemoz.github.io/interactive-transit-dashboard/",
@@ -65,7 +65,7 @@
   {
     "name": "ai-opportunity-roi-assessment",
     "category": "AI Governance, Ethics & Responsible AI",
-    "description": "AI Opportunity & ROI Assessment for SMBs — identify practical AI use cases, estimate potential business value, assess feasibility and risk, and prioritize initiatives worth piloting.",
+    "description": "AI Opportunity & ROI Assessment for SMBs: identify practical AI use cases, estimate potential business value, assess feasibility and risk, and prioritize initiatives worth piloting.",
     "tech": ["Next.js", "TypeScript", "Tailwind"],
     "status": "live",
     "demoUrl": "https://danieldemoz.github.io/ai-opportunity-roi-assessment/",
@@ -92,7 +92,7 @@
   {
     "name": "ai-vendor-selection-governance-advisor",
     "category": "AI Governance, Ethics & Responsible AI",
-    "description": "Vendor-neutral AI selection advisor for SMBs — deterministic scoring, governance gates, and evidence-based product comparisons.",
+    "description": "Vendor-neutral AI selection advisor for SMBs: deterministic scoring, governance gates, and evidence-based product comparisons.",
     "tech": ["Next.js", "TypeScript", "Tailwind"],
     "status": "live",
     "demoUrl": "https://danieldemoz.github.io/ai-vendor-selection-governance-advisor/",
@@ -128,7 +128,7 @@
   {
     "name": "career-college-rpa-demo",
     "category": "Applied AI & Automation",
-    "description": "RPA/AI demo hub for career colleges — interactive presentation, metrics dashboard, ROI calculator.",
+    "description": "RPA/AI demo hub for career colleges: interactive presentation, metrics dashboard, ROI calculator.",
     "tech": ["Python", "RPA"],
     "status": "live",
     "demoUrl": "https://danieldemoz.github.io/career-college-rpa-demo/",
@@ -146,7 +146,7 @@
   {
     "name": "ai-booking-optimization",
     "category": "Applied AI & Automation",
-    "description": "Healthcare clinic booking optimization — no-show prediction, reminders, and clinic dashboard.",
+    "description": "Healthcare clinic booking optimization: no-show prediction, reminders, and clinic dashboard.",
     "tech": ["Python", "Flask", "ML"],
     "status": "live",
     "demoUrl": "https://danieldemoz.github.io/ai-booking-optimization/",
@@ -191,7 +191,7 @@
   {
     "name": "esl",
     "category": "Web / Product Prototypes",
-    "description": "ESL Placement Portal — listening/speaking assessment, level placement, and lesson unlocking.",
+    "description": "ESL Placement Portal: listening/speaking assessment, level placement, and lesson unlocking.",
     "tech": ["Node.js", "JavaScript"],
     "status": "none",
     "demoUrl": null,
@@ -200,7 +200,7 @@
   {
     "name": "Daniel-Demoz-Data-Science-AI-Analytics-Portfolio",
     "category": "Portfolio Hub",
-    "description": "Canonical portfolio site — Data Scientist & AI Consultant positioning, full project index.",
+    "description": "Canonical portfolio site: Data Scientist & AI Consultant positioning, full project index.",
     "tech": ["HTML"],
     "status": "live",
     "demoUrl": "https://danieldemoz.github.io/Daniel-Demoz-Data-Science-AI-Analytics-Portfolio/",
