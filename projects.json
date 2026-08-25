@@ -121,8 +121,8 @@
     "category": "Applied AI & Automation",
     "description": "Professional AI governance readiness assessment with deterministic scoring, rule-based recommendations, and a 5×5 risk matrix.",
     "tech": ["Next.js", "FastAPI", "Python"],
-    "status": "none",
-    "demoUrl": null,
+    "status": "partial",
+    "demoUrl": "https://danieldemoz.github.io/ai-governance-assessment/",
     "repoUrl": "https://github.com/DanielDemoz/ai-governance-assessment"
   },
   {
