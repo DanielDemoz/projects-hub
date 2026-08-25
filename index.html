@@ -310,12 +310,20 @@
     const CATEGORY_ORDER = [
       'Toronto Transit Analytics',
       'Machine Learning & Predictive Analytics',
+      'AI Governance, Ethics & Responsible AI',
       'Applied AI & Automation',
       'Business Intelligence & SQL',
       'Web / Product Prototypes',
-      'Ethics & Thought Leadership',
       'Portfolio Hub'
     ];
+
+    const CATEGORY_PROJECT_ORDER = {
+      'AI Governance, Ethics & Responsible AI': [
+        'ai-governance-assessment',
+        'evidence-ai-funding-audit',
+        'ai-ethics-case-study'
+      ]
+    };
 
     const CATEGORY_META = {
       'Toronto Transit Analytics': {
@@ -326,8 +334,12 @@
         intro: 'Supervised learning projects aimed at retention, health risk, and customer value. Each repo walks through preparation, modeling, and how results could inform a business decision.',
         tools: 'Python, scikit-learn, XGBoost, Jupyter, Streamlit, Plotly, pandas'
       },
+      'AI Governance, Ethics & Responsible AI': {
+        intro: 'Three complementary capabilities: AI Governance Assessment measures governance readiness; Evidence-Based AI Funding Audit applies AI and analytics to accountability, risk, and public-sector review; AI Ethics Case Study analyzes the ethical and social implications of AI systems.',
+        tools: 'Next.js, FastAPI, Python, PostgreSQL, Node.js, Claude API, ethics analysis'
+      },
       'Applied AI & Automation': {
-        intro: 'Working prototypes for agents, workflow automation, and operational software. These range from college enrollment processing to field service scheduling and public funding review.',
+        intro: 'Working prototypes for agents, workflow automation, and operational software. These range from college enrollment processing to field service scheduling and clinic booking optimization.',
         tools: 'Python, JavaScript, Claude SDK, Playwright, Streamlit, Flask, PostgreSQL, Node.js'
       },
       'Business Intelligence & SQL': {
@@ -337,10 +349,6 @@
       'Web / Product Prototypes': {
         intro: 'Lightweight front-end builds that show how a product might feel before backend investment. Useful for demos with stakeholders and for testing layout and user flow.',
         tools: 'JavaScript, HTML, CSS, Node.js, Express, localStorage'
-      },
-      'Ethics & Thought Leadership': {
-        intro: 'A structured case study on robotics and metaphor in product design. Written work rather than a deployed app, included to show how I frame technology choices beyond the model score.',
-        tools: 'Research writing, ethics analysis, case study format'
       },
       'Portfolio Hub': {
         intro: 'The main portfolio site with background, selected outcomes, and contact details. Use it for context on teaching, consulting, and how the projects below fit together.',
@@ -396,6 +404,10 @@
 
       CATEGORY_ORDER.filter(c => byCategory[c]?.length).forEach(cat => {
         const meta = CATEGORY_META[cat] || { intro: '', tools: '' };
+        const order = CATEGORY_PROJECT_ORDER[cat];
+        const projects = order
+          ? order.map(name => byCategory[cat].find(p => p.name === name)).filter(Boolean)
+          : byCategory[cat];
         const section = document.createElement('section');
         section.className = 'category';
         section.innerHTML = `
@@ -404,7 +416,7 @@
             <p class="category-intro">${escapeHtml(meta.intro)}</p>
             ${meta.tools ? `<p class="category-tools"><strong>Tools:</strong> ${escapeHtml(meta.tools)}</p>` : ''}
           </div>
-          <div class="grid">${byCategory[cat].map(cardHtml).join('')}</div>`;
+          <div class="grid">${projects.map(cardHtml).join('')}</div>`;
         app.appendChild(section);
       });
     }
