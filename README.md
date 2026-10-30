@@ -7,4 +7,4 @@ Live, browsable index of every public project - demo links, code, and status bad
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT, see [LICENSE](LICENSE).
